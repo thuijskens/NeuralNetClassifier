@@ -6,11 +6,11 @@ structures that are returned, see the doc strings for ``load_data``
 and ``load_data_wrapper``.  In practice, ``load_data_wrapper`` is the
 function usually called by our neural network code.
 """
-
 #### Libraries
 # Standard library
 import cPickle
 import gzip
+import os
 
 # Third-party libraries
 import numpy as np
@@ -34,11 +34,11 @@ def load_data():
     That's done in the wrapper function ``load_data_wrapper()``, see
     below.
     """
-    f = gzip.open('C:/Users/Thomas/Documents/Kaggle/Otto-group/Neural Networks/data/mnist.pkl.gz', 'rb')
+    f = gzip.open(os.getcwd() + '\\data\\mnist.pkl.gz', 'rb')
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
-
+    
 def load_data_wrapper():
     """Return a tuple containing ``(training_data, validation_data,
     test_data)``. Based on ``load_data``, but the format is more
