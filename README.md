@@ -7,6 +7,8 @@ Implementation of the classifier is enspired by code posted on:
 
 See the script minimal_example.py for a very small example. This script will be expanded with more examples in the future.
 
+All of this work is still very much **work in progress**, especially the RMSprop implementation. Use at your own risk!
+
 # Guidelines
 Each NeuralNetClassifier needs a list containing the different layers making up the neural network. The items of this list need to be of type NeuralNetworkLayer. 
 
